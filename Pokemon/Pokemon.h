@@ -32,10 +32,25 @@ private:
 
 public:
 	// constructor + destructor
-	Pokemon();
-	~Pokemon();
+	Pokemon(string n, string t1, string t2, int hp, int atk, int def, int spd, move moveOne, 
+		move moveTwo, move moveThree, move moveFour);
+	virtual ~Pokemon();
 
-	// 
+	// setters
+	void setHitpoints(int Hitpoints);
+	void setAttack(int Attack);
+	void setDefense(int Defense);
+	void setSpeed(int Speed);
+
+	// might have to add more setters/getters
+
+	// getters
+	int getHitpoints();
+	int getAttack();
+	int getDefense();
+	int getSpeed();
+
+
 };
 
 
