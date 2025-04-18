@@ -32,7 +32,7 @@ int Stats::getRoundsPlayed() {
 	return roundsPlayed;
 }
 
-// file handling functions
+// file handling functions with Stats.txt
 void Stats::loadStats() {
 
 }

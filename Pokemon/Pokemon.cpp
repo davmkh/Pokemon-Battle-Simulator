@@ -52,3 +52,4 @@ int Pokemon::getDefense() {
 int Pokemon::getSpeed() {
 	return speed;
 }
+
