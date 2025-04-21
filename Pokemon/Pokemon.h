@@ -15,25 +15,19 @@ private:
 	int attack;
 	int defense;
 	int speed;
+	int level;
 
-	// Moves (will be called in Pokemon class)
-	typedef struct move {
-		string name;
-		string type;
-		int damage;
-		int accuracy; // will implement after beta version of game
-	};
 
 	// moveset (up to and maximum 4)
-	move move1;
-	move move2;
-	move move3;
-	move move4;
+	pokemonMove move1;
+	pokemonMove move2;
+	pokemonMove move3;
+	pokemonMove move4;
 
 public:
 	// constructor + destructor
-	Pokemon(string n, string t1, string t2, int hp, int atk, int def, int spd, move moveOne, 
-		move moveTwo, move moveThree, move moveFour);
+	Pokemon(string n, string t1, string t2, int hp, int atk, int def, int spd, pokemonMove moveOne, 
+		pokemonMove moveTwo, pokemonMove moveThree, pokemonMove moveFour);
 	virtual ~Pokemon();
 
 	// setters

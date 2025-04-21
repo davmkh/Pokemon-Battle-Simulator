@@ -1,11 +1,12 @@
 #include "Pokemon.h"
 
 // constructor + destructor definitions //
-Pokemon::Pokemon(string n, string t1, string t2, int hp, int atk, int def, int spd, move moveOne, move moveTwo, move moveThree, move moveFour) {
+Pokemon::Pokemon(string n, string t1, string t2, int hp, int atk, int def, int spd, pokemonMove moveOne, pokemonMove moveTwo, pokemonMove moveThree, pokemonMove moveFour) {
 	name = n;
 	type1 = t1;
 	type2 = t2;
 	hitpoints = hp;
+	level = 100;
 	attack = atk;
 	defense = def;
 	speed = spd;
