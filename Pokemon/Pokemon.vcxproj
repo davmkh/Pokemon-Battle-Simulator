@@ -158,7 +158,7 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>C:\Users\dddav\Downloads\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Simon\Downloads\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -200,6 +200,7 @@
   <ItemGroup>
     <ClCompile Include="BattleSystem.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Menu.cpp" />
     <ClCompile Include="otherFunctions.cpp" />
     <ClCompile Include="Pokemon.cpp" />
     <ClCompile Include="Stats.cpp" />
@@ -209,6 +210,7 @@
     <ClInclude Include="BattleSystem.h" />
     <ClInclude Include="Characters.h" />
     <ClInclude Include="header.h" />
+    <ClInclude Include="Menu.h" />
     <ClInclude Include="Pokemon.h" />
     <ClInclude Include="Stats.h" />
     <ClInclude Include="Team.h" />
