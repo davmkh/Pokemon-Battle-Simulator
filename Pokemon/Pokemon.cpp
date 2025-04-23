@@ -23,6 +23,11 @@ Pokemon::~Pokemon() {
 // setters definitons //
 void Pokemon::setHitpoints(int Hitpoints) {
 	hitpoints = Hitpoints;
+
+	if (hitpoints == 0)
+	{
+		fainted = true;
+	}
 }
 
 void Pokemon::setAttack(int Attack) {
@@ -35,6 +40,11 @@ void Pokemon::setDefense(int Defense) {
 
 void Pokemon::setSpeed(int Speed) {
 	speed = Speed;
+}
+
+void Pokemon::setFainted(bool newStatus)
+{
+	fainted = newStatus;
 }
 
 // getters definitions //
@@ -62,6 +72,11 @@ string Pokemon::getType1()
 string Pokemon::getType2()
 {
 	return type2;
+}
+
+bool Pokemon::getFaintedStatus()
+{
+	return fainted;
 }
 
 void Pokemon::attackTarget(Pokemon& target, int moveNumber)

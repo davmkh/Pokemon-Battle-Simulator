@@ -24,6 +24,8 @@ private:
 	pokemonMove move3;
 	pokemonMove move4;
 
+	bool fainted;
+
 public:
 	// constructor + destructor
 	Pokemon(string n, string t1, string t2, int hp, int atk, int def, int spd, pokemonMove moveOne, 
@@ -35,6 +37,7 @@ public:
 	void setAttack(int Attack);
 	void setDefense(int Defense);
 	void setSpeed(int Speed);
+	void setFainted(bool newStatus);
 
 	// might have to add more setters/getters
 
@@ -45,6 +48,8 @@ public:
 	int getSpeed();
 	string getType1();
 	string getType2();
+
+	bool getFaintedStatus();
 
 	void attackTarget(Pokemon& target, int moveNumber); //Attack function that passes in the target address and the move number 
 

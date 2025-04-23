@@ -145,7 +145,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\dddav\Downloads\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\ellio\source\SFML-3.0.0\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-audio-d.lib;sfml-system-d.lib;sfml-window-d.lib;sfml-graphics-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -202,12 +202,14 @@
     <ClCompile Include="otherFunctions.cpp" />
     <ClCompile Include="Pokemon.cpp" />
     <ClCompile Include="Stats.cpp" />
+    <ClCompile Include="Team.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Characters.h" />
     <ClInclude Include="header.h" />
     <ClInclude Include="Pokemon.h" />
     <ClInclude Include="Stats.h" />
+    <ClInclude Include="Team.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Stats.txt" />
