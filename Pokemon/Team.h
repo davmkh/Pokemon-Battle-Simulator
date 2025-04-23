@@ -21,4 +21,6 @@ public:
 	bool allFainted();
 
 	bool switchPokemon(int index);
+
+	bool addPokemon(Pokemon* selected);
 };

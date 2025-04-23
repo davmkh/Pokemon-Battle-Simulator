@@ -71,3 +71,23 @@ bool Team::switchPokemon(int index)
 	activePokemonIndex = index;
 	return true;
 }
+
+bool Team::addPokemon(Pokemon* selected)
+{
+	for (int i = 0; i < 3; ++i)
+	{
+		if (team[i] == nullptr)
+		{
+			team[i] = selected;
+
+			if (activePokemon == nullptr)
+			{
+				activePokemon = selected;
+				activePokemonIndex = i;
+			}
+
+			return true;
+		}
+	}
+	return false;
+}
