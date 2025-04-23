@@ -19,4 +19,6 @@ public:
 	int getActiveIndex();
 
 	bool allFainted();
+
+	bool switchPokemon(int index);
 };

@@ -48,3 +48,26 @@ bool Team::allFainted()
 	}
 	return true;
 }
+
+bool Team::switchPokemon(int index)
+{
+	if (index < 0 || index > 3) //out of bound error
+	{
+		return false;
+	}
+
+	if (index == activePokemonIndex) //already active pokemon
+	{
+		return false;
+	}
+
+	if (team[index]->getFaintedStatus()) //pokemon at passed index is fainted
+	{
+		return false;
+	}
+
+	//all checks have been passed, will now switch
+	activePokemon = team[index];
+	activePokemonIndex = index;
+	return true;
+}
