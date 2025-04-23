@@ -43,6 +43,10 @@ public:
 	int getAttack();
 	int getDefense();
 	int getSpeed();
+	string getType1();
+	string getType2();
+
+	void attackTarget(Pokemon& target, int moveNumber); //Attack function that passes in the target address and the move number 
 
 
 };
