@@ -20,29 +20,39 @@ int main()
     // VENASAUR
     Texture Venasaur;
     if (!Venasaur.loadFromFile("sprites/venasaur-back.gif")) {
-        cerr << "error loading in sprite" << endl;
+        cerr << "error loading in venasaur" << endl;
     }
 
     // linking image to sprite
     Sprite VenasaurBack(Venasaur);
     VenasaurBack.setScale({ 10, 10 });
 
+    Texture background;
+    if (!background.loadFromFile("sprites/menu background.png")) {
+        cerr << "error loading background" << endl;
+    }
+
+    Sprite menuBackground(background);
+    menuBackground.setScale({ 1.1, 1.1 });
 
     // CHARIZARD
     Texture Charizard;
 
     // FONT
     Font font;
-    if (!font.openFromFile("Pokemon Classic.ttf")) {
+    if (!font.openFromFile("fonts/pixelFont.ttf")) {
         cerr << "cannot use font" << endl;
     }
 
     // links font images
-    Text fontText(font);
-    fontText.setString("TESTING1"); // draws font on screen
-    fontText.setFillColor(Color::Cyan); // sets color
-    fontText.setPosition({ 500, 250 }); // sets position
-    fontText.setCharacterSize(100);
+    Text playText(font);
+    playText.setString("Play"); // draws font on screen
+
+    playText.setFillColor(Color::Black); // sets color
+    playText.setOutlineColor(Color::White);
+    playText.setOutlineThickness(5);
+    playText.setPosition({ 300, 250 }); // sets position
+    playText.setCharacterSize(150);
 
 
     // MUSIC
@@ -81,11 +91,11 @@ int main()
                     Vector2f mousePOS = window.mapPixelToCoords(Mouse::getPosition(window));
 
                     // prints mouse position for testing
-                    cout << "x = " << mousePOS.x << endl;
-                    cout << "y = " << mousePOS.y << endl;
+                    //cout << "x = " << mousePOS.x << endl;
+                    //cout << "y = " << mousePOS.y << endl;
 
                     // text hitbox
-                    if (fontText.getGlobalBounds().contains(mousePOS)) {
+                    if (playText.getGlobalBounds().contains(mousePOS)) {
                         GAMESTATE = gameState::Play;
                     }
                 }
@@ -98,19 +108,34 @@ int main()
 
                 // Menu case
             case gameState::Menu:
-                window.draw(VenasaurBack);
-                window.draw(fontText);
+
+
+                window.draw(menuBackground);
+                window.draw(playText);              
+
+
+
+
                 break;
 
                 // Game case
             case gameState::Play:
-                fontText.setString("Testing 2");
-                fontText.setPosition({ 200, 800 });
-                window.draw(fontText);
+
+                playText.setCharacterSize(100);
+                playText.setString("CHOOSE YOUR TEAM");
+                playText.setPosition({430, 100});
+                window.draw(playText);
+
+                
+
                 break;
+
+            case gameState::Info:
 
 
             }
+
+
 
             window.display();
         }

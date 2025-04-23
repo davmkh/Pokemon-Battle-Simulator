@@ -1,8 +1,7 @@
 #include "header.h"
 #include "Pokemon.h"
 
-class Team
-{
+class Team {
 private:
 	Pokemon* team[3]; //fixed team array of 3 pokemon
 	Pokemon* activePokemon; //Which pokemon is currently in use
