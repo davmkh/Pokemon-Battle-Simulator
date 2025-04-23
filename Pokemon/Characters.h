@@ -59,6 +59,7 @@ public:
 
 // Gengar - Ghost/Poison
 class Gengar : public Pokemon {
+public:
 	Gengar()
 		: Pokemon("Gengar", "GHOST", "POISON", 230, 200, 145, 225,
 			{ "Shawdow Ball", "GHOST", 80, 100 },
@@ -69,6 +70,7 @@ class Gengar : public Pokemon {
 
 // Darkrai - Dark
 class Darkrai : public Pokemon {
+public:
 	Darkrai()
 		: Pokemon("Darkrai", "DARK", "", 250, 230, 185, 255,
 			{ "Dark Pulse", "DARK", 80, 100 },
@@ -79,6 +81,7 @@ class Darkrai : public Pokemon {
 
 // Lucario - Fighting/Steel
 class Lucario : public Pokemon {
+public:
 	Lucario()
 		: Pokemon("Lucario", "FIGHTING", "STEEL", 250, 230, 145, 185,
 			{ "Aura Sphere", "FIGHTING", 80, 100 },
@@ -89,6 +92,7 @@ class Lucario : public Pokemon {
 
 // Metagross - Steel/Psychic
 class Metagross : public Pokemon {
+public:
 	Metagross()
 		: Pokemon("Metagross", "STEEL", "PSYCHIC", 270, 235, 225, 145,
 			{ "Meteor Mash", "STEEL", 90, 90 },
@@ -99,6 +103,7 @@ class Metagross : public Pokemon {
 
 // Mewtwo - Pyschic
 class Mewtwo : public Pokemon {
+public:
 	Mewtwo()
 		: Pokemon("Mewtwo", "PSYCHIC", "", 322, 269, 185, 265,
 			{ "Psychic", "PSYCHIC", 90, 100 },

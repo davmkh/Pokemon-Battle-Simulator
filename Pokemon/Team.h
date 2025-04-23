@@ -1,5 +1,6 @@
 #include "header.h"
 #include "Pokemon.h"
+#include "Characters.h"
 
 class Team {
 private:
@@ -22,4 +23,6 @@ public:
 	bool switchPokemon(int index);
 
 	bool addPokemon(Pokemon* selected);
+
+	void generateRandomTeam();
 };

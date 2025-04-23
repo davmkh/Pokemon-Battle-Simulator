@@ -6,6 +6,6 @@
 class Menu
 {
 	Menu();
-	void runMenu();
+	bool runMenu();
 };
 

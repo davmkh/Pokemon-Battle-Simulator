@@ -91,3 +91,45 @@ bool Team::addPokemon(Pokemon* selected)
 	}
 	return false;
 }
+
+void Team::generateRandomTeam()
+{
+	for (int i = 0; i < 3; ++i)
+	{
+		Pokemon* current = nullptr;
+		int randomPokemon = (rand() % 10) + 1;
+		switch (randomPokemon)
+		{
+		case 1: //pikachu
+			current = new Pikachu();
+			break;
+		case 2: //charizard
+			current = new Charizard();
+			break;
+		case 3: //venasaur
+			current = new Venasaur();
+			break;
+		case 4: //blastoise
+			current = new Blastoise();
+			break;
+		case 5: //abomasnow
+			current = new Abomasnow();
+			break;
+		case 6: //gengar
+			current = new Gengar();
+			break;
+		case 7: //darkrai
+			current = new Darkrai();
+			break;
+		case 8: //lucario
+			current = new Lucario();
+			break;
+		case 9: //metagross
+			current = new Metagross();
+			break;
+		case 10: //mewtwo
+			current = new Mewtwo();
+			break;
+		}
+	}
+}
