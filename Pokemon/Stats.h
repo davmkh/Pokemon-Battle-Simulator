@@ -8,6 +8,8 @@ private:
 	int losses;
 	int roundsPlayed;
 
+	string name; // allows player to set name
+
 public:
 	// constructor
 	Stats(int Wins, int Losses, int RoundsPlayed);
