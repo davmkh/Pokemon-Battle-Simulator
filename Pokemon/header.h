@@ -3,6 +3,10 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
+#include <SFML/Window.hpp>
+
 using namespace std;
 
 // Moves (will be called in Pokemon class)
