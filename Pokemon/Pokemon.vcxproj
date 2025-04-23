@@ -198,6 +198,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BattleSystem.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="otherFunctions.cpp" />
     <ClCompile Include="Pokemon.cpp" />
@@ -205,6 +206,7 @@
     <ClCompile Include="Team.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BattleSystem.h" />
     <ClInclude Include="Characters.h" />
     <ClInclude Include="header.h" />
     <ClInclude Include="Pokemon.h" />

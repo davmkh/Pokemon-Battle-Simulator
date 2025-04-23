@@ -14,6 +14,7 @@ int main()
 {
     gameState GAMESTATE = gameState::Menu;
 
+    srand(time(nullptr));
     // linking all pokemon sprites
 
     // VENASAUR

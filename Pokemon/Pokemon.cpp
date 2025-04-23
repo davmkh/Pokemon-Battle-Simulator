@@ -74,6 +74,26 @@ string Pokemon::getType2()
 	return type2;
 }
 
+pokemonMove Pokemon::getMove1()
+{
+	return move1;
+}
+
+pokemonMove Pokemon::getMove2()
+{
+	return move2;
+}
+
+pokemonMove Pokemon::getMove3()
+{
+	return move3;
+}
+
+pokemonMove Pokemon::getMove4()
+{
+	return move4;
+}
+
 bool Pokemon::getFaintedStatus()
 {
 	return fainted;

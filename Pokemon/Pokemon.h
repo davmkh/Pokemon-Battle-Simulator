@@ -48,6 +48,10 @@ public:
 	int getSpeed();
 	string getType1();
 	string getType2();
+	pokemonMove getMove1();
+	pokemonMove getMove2();
+	pokemonMove getMove3();
+	pokemonMove getMove4();
 
 	bool getFaintedStatus();
 

@@ -6,6 +6,9 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
 #include <SFML/Window.hpp>
+#include <cstdlib> //rand()
+#include <ctime> //time()
+#include <vector>
 #define FPS 60
 
 using namespace std;
