@@ -1,4 +1,5 @@
 #include <SFML/Graphics.hpp>
+
 using namespace sf; // allows for us to not use sf:: whenever calling for a function from SFML
 
 int main()
@@ -14,7 +15,7 @@ int main()
             if (event->is<sf::Event::Closed>())
                 window.close();
         }
-
+        
         window.clear();
         window.draw(shape);
         window.display();
