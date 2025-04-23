@@ -19,7 +19,7 @@ int main()
 
 
     // 8-BIT SPRITES FOR SELECT SCREEN -------------------------------------------------------------
-    
+
     // Abomasnow 8-bit
     Texture abomasnow_8bit;
     if (!abomasnow_8bit.loadFromFile("sprites/abomasnow-icon.png"))
@@ -148,15 +148,15 @@ int main()
 
 
 
-    // VENASAUR
-    Texture Venasaur;
-    if (!Venasaur.loadFromFile("sprites/venasaur-back.gif")) {
-        cerr << "error loading in venasaur" << endl;
-    }
+    //// VENASAUR
+    //Texture Venasaur;
+    //if (!Venasaur.loadFromFile("sprites/venasaur-back.gif")) {
+    //    cerr << "error loading in venasaur" << endl;
+    //}
 
-    // linking image to sprite
-    Sprite VenasaurBack(Venasaur);
-    VenasaurBack.setScale({ 10, 10 });
+    //// linking image to sprite
+    //Sprite VenasaurBack(Venasaur);
+    //VenasaurBack.setScale({ 10, 10 });
 
     Texture background;
     if (!background.loadFromFile("sprites/menu background.png")) {
@@ -166,8 +166,8 @@ int main()
     Sprite menuBackground(background);
     menuBackground.setScale({ 1.1, 1.1 });
 
-    // CHARIZARD
-    Texture Charizard;
+    //// CHARIZARD
+    //Texture Charizard;
 
     // FONT
     Font font;
@@ -214,23 +214,15 @@ int main()
             }
 
             // 
-            const auto& mouseEvent = event->getIf < Event::MouseButtonPressed >();
-
-            // if left mouse button clicked
-            if (mouseEvent->button == Mouse::Button::Left) {
-
-                // detecting mouse position
-                Vector2f mousePOS = window.mapPixelToCoords(Mouse::getPosition(window));
-
-                // prints mouse position for testing
-                //cout << "x = " << mousePOS.x << endl;
-                //cout << "y = " << mousePOS.y << endl;
-
-                // text hitbox
-                if (playText.getGlobalBounds().contains(mousePOS)) {
-                    GAMESTATE = gameState::Play;
+            if (const auto* mouseEvent = event->getIf<Event::MouseButtonPressed>()) {
+                if (mouseEvent->button == Mouse::Button::Left) {
+                    Vector2f mousePOS = window.mapPixelToCoords(Mouse::getPosition(window));
+                    if (playText.getGlobalBounds().contains(mousePOS)) {
+                        GAMESTATE = gameState::Play;
+                    }
                 }
             }
+
         }
 
         // must draw in between these functions
@@ -261,7 +253,7 @@ int main()
             // drawing the pokeballs
             //pokeballIcon.setPosition({ 200, 800 });
             //window.draw(pokeballIcon);
-            
+
 
 
             break;
@@ -278,9 +270,3 @@ int main()
 
 
 }
-
-
-
-
-
-
