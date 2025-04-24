@@ -208,7 +208,7 @@ int main()
                 window.close();
             }
 
-            // if gamestate = main menu
+            // if gamestate = main menu & mouse button is pressed
             if (event->is<Event::MouseButtonPressed >() && GAMESTATE == gameState::Menu) {
 
             }
@@ -257,10 +257,13 @@ int main()
             playText.setString("CHOOSE YOUR TEAM");
             playText.setPosition({ 430, 100 });
             window.draw(playText);
+            closedPokeballIcon.setPosition({ 200, 800 });
+            window.draw(closedPokeballIcon);
+
 
             // drawing the pokeballs
-            //pokeballIcon.setPosition({ 200, 800 });
-            //window.draw(pokeballIcon);
+            //closedPokeballIcon.setPosition({ 200, 800 });
+            //window.draw(closedPokeballIcon);
             
 
 
