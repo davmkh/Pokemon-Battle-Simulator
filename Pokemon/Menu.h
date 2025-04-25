@@ -5,6 +5,7 @@
 
 class Menu
 {
+public:
 	Menu();
 	void runMenu();
 };
